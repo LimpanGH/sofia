@@ -1,5 +1,23 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
+
+
+  /* sofias ⬇️ */
+  --bg-primary: rgb(251,250,247);
+  --bg-secondary: #FBE2C3;
+
+  --font-primary: 'helvetica neue', helvetica, arial, sans-serif; /* Body */
+  --font-secondary: 'playfair display', georgia, serif; /* Navbar och rubriker (h1 osv) */
+
+  --font-color-primary: #881616; /* Navbar-text */ 
+  --font-color-secondary:  #1E1E1E; /* Text */
+  --font-color-secondary:  #848484; /* Beskrivningsrubrik */
+
+  --button-bg-primary: none;
+  
+  /* sofias ⬆️*/ 
+
+
   --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
