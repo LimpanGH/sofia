@@ -10,7 +10,7 @@
       <h1>Sofia Masrour CV</h1>
     </div>
     <div>
-      <h1>About</h1>
+      <h1><router-link to="/about">About</router-link></h1>
     </div>
   </div>
     <!-- <TheWelcome /> -->
