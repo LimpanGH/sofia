@@ -31,17 +31,38 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div>
+  <div :class="{ dark: appStore.darkMode }">
     <NavBar />
     <h1>{{ message }}</h1>
     <button @click="incrementCount">Increment</button>
     <p>Count from Pinia store: {{ appStore.doubleCount }}</p>
     <BernardRudofsky message="Hello from the parent!" />
+    <button @click="appStore.toggleDarkMode">
+      Toggle Dark Mode
+    </button>
   </div>
   <RouterView />
 </template>
 
 <style scoped>
+
+/* Default light mode styles */
+body {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: #121212;
+  color: white;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+}
+
+
 /* header {
   line-height: 1.5;
   max-height: 100vh;
