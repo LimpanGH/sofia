@@ -75,11 +75,7 @@ const toggleMenu = () => {
       <div :class="['links', { open: isMenuOpen }]">
         <h1><router-link to="/" class="link">Home</router-link></h1>
         <h1><router-link to="/about" class="link">About</router-link></h1>
-        <h1>
-          <router-link to="/flygfyrens_handelspark" class="link">
-            Flygfyrens Handelspark
-          </router-link>
-        </h1>
+      
       </div>
     </div>
   </main>

@@ -1,28 +1,43 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
 import NavBar from '@/components/NavBar.vue';
+import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
+import { RouterView } from 'vue-router';
+import { useAppStore } from './stores/appStore';
+import BernardRudofsky from './views/BernardRudofsky.vue';
 
-// import HelloWorld from './components/HelloWorld.vue'
+const appStore = useAppStore()
+
+const message = ref('Welcome to the app!')
+
+onMounted(() => {
+  console.log('App has been mounted')
+})
+
+const incrementCount = () => {
+  appStore.increment()
+}
+
+onMounted(() => {
+  console.log('App mounted!')
+})
+
+onUpdated(() => {
+  console.log('App updated!')
+})
+
+onUnmounted(() => {
+  console.log('App unmounted!')
+})
 </script>
 
 <template>
   <div>
     <NavBar />
+    <h1>{{ message }}</h1>
+    <button @click="incrementCount">Increment</button>
+    <p>Count from Pinia store: {{ appStore.doubleCount }}</p>
+    <BernardRudofsky message="Hello from the parent!" />
   </div>
-  <!-- <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header> -->
-  <!-- <RouterLink to="/about">About></RouterLink>   -->
-
   <RouterView />
 </template>
 
