@@ -3,9 +3,23 @@ import NavBar from '@/components/NavBar.vue';
 import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
 import { RouterView } from 'vue-router';
 import { useAppStore } from './stores/appStore';
+import { watch } from 'vue';
 import BernardRudofsky from './views/BernardRudofsky.vue';
 
 const appStore = useAppStore()
+
+watch(
+  () => appStore.darkMode,
+  (isDarkMode) => {
+    if (isDarkMode) {
+      document.body.classList.add('dark')
+    } else {
+      document.body.classList.remove('dark')
+    }
+  },
+  { immediate: true } // Trigger immediately to apply the initial state
+)
+
 
 const message = ref('Welcome to the app!')
 
@@ -37,30 +51,14 @@ onUnmounted(() => {
     <button @click="incrementCount">Increment</button>
     <p>Count from Pinia store: {{ appStore.doubleCount }}</p>
     <BernardRudofsky message="Hello from the parent!" />
-    <button @click="appStore.toggleDarkMode">
-      Toggle Dark Mode
-    </button>
+    
   </div>
   <RouterView />
 </template>
 
 <style scoped>
 
-/* Default light mode styles */
-body {
-  background-color: white;
-  color: black;
-}
 
-.dark {
-  background-color: #121212;
-  color: white;
-}
-
-button {
-  padding: 10px;
-  margin: 10px;
-}
 
 
 /* header {
