@@ -162,7 +162,7 @@
 </template>
 
 <style>
-h1 {
+/* h1 {
   color: var(--font-color-primary);
 }
 h3 {
@@ -178,5 +178,5 @@ h4 {
     display: flex;
     align-items: center;
   }
-}
+} */
 </style>

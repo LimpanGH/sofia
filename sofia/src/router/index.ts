@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Flygfyrens_Handelspark from '../views/flygfyrens_handelspark.vue'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -8,12 +7,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      // component: HomeView,
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/flygfyrens_handelspark',
       name: 'flygfyrens_handelspark',
-      component: Flygfyrens_Handelspark,
+      component: () => import('../views/FlygfyrensHandelspark.vue'),
     },
     {
       path: '/about',
@@ -22,6 +22,47 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
+    },
+
+    {
+      path: '/bernard_rudofsky',
+      name: 'bernard_rudofsky',
+      component: () => import('../views/BernardRudofsky.vue'),
+    },
+    {
+      path: '/energihamnen',
+      name: 'energihamnen',
+      component: () => import('../views/EnergiHamnen.vue'),
+    },
+    {
+      path: '/habiteum',
+      name: 'habiteum',
+      component: () => import('../views/HabiteumView.vue'),
+    },
+    {
+      path: '/lokalanpassningsProjekt',
+      name: 'lokalanpassningsProjekt',
+      component: () => import('../views/LokalanpassningsProjekt.vue'),
+    },
+    {
+      path: '/ostra_sala_backe_etapp_3a',
+      name: 'ostra_sala_backe_etapp_3a',
+      component: () => import('../views/OstraSalaBackeEtapp3a.vue'),
+    },
+    {
+      path: '/stallet_sofiero',
+      name: 'stallet_sofiero',
+      component: () => import('../views/StalletSofiero.vue'),
+    },
+    {
+      path: '/the_little_helpers',
+      name: 'the_little_helpers',
+      component: () => import('../views/TheLittleHelpers.vue'),
+    },
+    {
+      path: '/the_wandering_synagogue',
+      name: 'the_wandering_synagogue',
+      component: () => import('../views/TheWanderingSynagogue.vue'),
     },
   ],
 })
