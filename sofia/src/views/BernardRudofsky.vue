@@ -5,7 +5,6 @@ defineProps<{
 </script>
 
 <template>
-  
   <div>Bernard_Rudofsky</div>
   <h2>{{ message }}</h2>
 </template>

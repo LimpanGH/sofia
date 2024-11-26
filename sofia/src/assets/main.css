@@ -1,4 +1,34 @@
-/* @import './base.css';
+ @import './base.css'; 
+
+body {
+  background-color: white;
+  color: black;
+}
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+button {
+  background-color: #6200ea;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #3700b3;
+}
+a {
+  color: #1e88e5;
+}
+body.dark a {
+  color: #bb86fc;
+}
+
+
+
+/* 
 
 #app {
   max-width: 1280px;
@@ -34,36 +64,4 @@ a,
   }
 } */
 
-/* Light mode (default) */
-body {
-  background-color: white;
-  color: black;
-}
-
-/* Dark mode */
-body.dark {
-  background-color: #121212;
-  color: white;
-}
-
-/* Additional shared styles for buttons, links, etc. */
-button {
-  background-color: #6200ea;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #3700b3;
-}
-
-a {
-  color: #1e88e5;
-}
-
-body.dark a {
-  color: #bb86fc;
-}
+ 

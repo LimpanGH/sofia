@@ -23,7 +23,7 @@ const router = createRouter({
       path: '/bernard_rudofsky',
       name: 'bernard_rudofsky',
       component: () => import('../views/BernardRudofsky.vue'),
-      props: { message: 'Hello from the Router!' }
+      props: { message: 'Hello from the Router!' },
     },
     {
       path: '/energihamnen',
