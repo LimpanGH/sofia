@@ -1,46 +1,80 @@
 <style src="../assets/base.css"></style>
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { useRoute } from 'vue-router'
 import { useAppStore } from '../stores/appStore'
 import darkModeIcon from '../assets/darkMode.svg'
 import lightModeIcon from '../assets/lightMode.svg'
 
 const appStore = useAppStore()
+const route = useRoute()
+
+const message = computed(() => {
+  return ` /${String(route.name)} `
+})
 
 const isMenuOpen = ref(false)
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
 }
+
+const isMobileView = ref(window.innerWidth < 768)
+const updateView = () => {
+  isMobileView.value = window.innerWidth < 768
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updateView)
+})
+onUnmounted(() => {
+  window.removeEventListener('resize', updateView)
+})
 </script>
 
 <template>
   <main>
     <div class="nav">
-      <div>
+      <div class="nameDiv">
         <h1 class="name">Sofia Masrour</h1>
+        <h3>{{ message }}</h3>
       </div>
 
-      <div class="theme-toggle" @click="appStore.toggleDarkMode">
-        <img v-if="appStore.darkMode" :src="darkModeIcon" alt="Dark Mode Icon" />
-        <img v-else :src="lightModeIcon" alt="Light Mode Icon" />
-      </div>
-
-      <div class="hamburger" @click="toggleMenu">
+      <div class="hamburger" v-if="isMobileView" @click="toggleMenu">
         <span :class="{ active: isMenuOpen }"></span>
         <span :class="{ active: isMenuOpen }"></span>
         <span :class="{ active: isMenuOpen }"></span>
       </div>
 
       <div :class="['links', { open: isMenuOpen }]">
-        <h1><router-link to="/" class="link">Home</router-link></h1>
-        <h1><router-link to="/about" class="link">About</router-link></h1>
+        <div class="theme-toggle" @click="appStore.toggleDarkMode()">
+          <img v-if="appStore.darkMode" :src="darkModeIcon" alt="Dark Mode Icon" />
+          <img v-else :src="lightModeIcon" alt="Light Mode Icon" />
+        </div>
+
+        <h3>
+          <router-link to="/" class="link" @click="isMobileView && toggleMenu()">
+            Home
+          </router-link>
+        </h3>
+
+        <h3>
+          <router-link to="/about" class="link" @click="isMobileView && toggleMenu()">
+            About Me
+          </router-link>
+        </h3>
+        <h3>
+          <router-link to="/contact" class="link" @click="isMobileView && toggleMenu()">
+            Contact
+          </router-link>
+        </h3>
       </div>
     </div>
   </main>
 </template>
 
 <style scoped>
-.name {
+.name,
+h3 {
   color: var(--font-color-primary);
 }
 
@@ -57,9 +91,8 @@ const toggleMenu = () => {
   padding: 1rem;
   background: var(--bg-secondary);
 }
-
 .hamburger {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 25px;
@@ -88,12 +121,21 @@ const toggleMenu = () => {
 }
 
 .links {
-  display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
+  background: var(--bg-secondary);
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  padding: 1rem;
 }
 
 .links.open {
-  display: block;
+  display: flex;
+  margin-top: 2rem;
 }
 
 .theme-toggle {
@@ -105,25 +147,39 @@ const toggleMenu = () => {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .hamburger {
+@media (min-width: 768px) {
+  .nav {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background: var(--bg-secondary);
+  }
+  .nameDiv {
+    min-width: 15rem;
+  }
+
+  .hamburger {
+    display: none;
   }
 
   .links {
-    display: none;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
     gap: 1rem;
-    width: 100%;
-    background: var(--bg-secondary);
-    position: absolute;
-    top: 3rem;
-    left: 0;
-    padding: 1rem;
+    background: transparent;
+    position: static;
+    margin-top: 0;
+    padding: 0;
   }
 
-  .links.open {
-    display: flex;
+  .theme-toggle img {
+    width: 1.5rem;
+    height: auto;
   }
 }
 </style>

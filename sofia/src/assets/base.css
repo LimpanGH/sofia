@@ -1,35 +1,40 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-
-  *,
+  /* *,
   *::before,
   *::after {
     box-sizing: border-box;
   }
-  
+
   * {
     padding: 0;
     margin: 0;
-  }
-  
+  } */
 
   /* sofias ⬇️ */
-  --bg-primary: rgb(251,250,247);
-  --bg-secondary: #FBE2C3;
+  --bg-primary-light: rgb(251, 250, 247);
+  --bg-primary-dark: black;
+  --bg-secondary: #fbe2c3;
 
   --font-primary: 'helvetica neue', helvetica, arial, sans-serif; /* Body */
   --font-secondary: 'playfair display', georgia, serif; /* Navbar och rubriker (h1 osv) */
 
-  --font-color-primary: #881616; /* Navbar-text */ 
-  --font-color-secondary:  #1E1E1E; /* Text */
-  --font-color-secondary:  #848484; /* Beskrivningsrubrik */
+  --font-color-primary: #881616; /* Navbar-text */
+  --font-color-secondary: #1e1e1e; /* Text */
+  --font-color-tertiary: #848484; /* Beskrivningsrubrik */
+  --font-color-light: black;
+  --font-color-dark: white;
+  --font-family-primary: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+
+
+  --font-size-md: 1.4rem;
+  --font-size-lg: 1.6rem;
 
   --button-bg-primary: none;
-  
-  /* sofias ⬆️*/ 
 
-/* 
-  --vt-c-white: #ffffff;
+  /* sofias ⬆️*/
+
+  /* --vt-c-white: #ffffff;
   --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2;
 
@@ -111,5 +116,6 @@ body {
   font-size: 15px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
+  -moz-osx-font-smoothing: grayscale;
+} */
 }
