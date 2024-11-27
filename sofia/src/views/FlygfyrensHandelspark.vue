@@ -27,7 +27,7 @@
       </p>
 
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-24 kl. 13.23.44 1.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-24 kl. 13.23.44.png"
         alt=""
       />
       <p>Handelsplatsens befintliga palett.</p>
