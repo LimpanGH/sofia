@@ -1,13 +1,25 @@
- @import './base.css'; 
+@import './base.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-primary-light);
+  color: var(--font-color-light);
 }
 body.dark {
-  background-color: #121212;
-  color: white;
+  background-color: var(--bg-primary-dark);
+  color: var(--font-color-dark);
 }
+
 button {
   background-color: #6200ea;
   color: white;
@@ -20,13 +32,48 @@ button:hover {
   background-color: #3700b3;
 }
 a {
-  color: #1e88e5;
+  color: var(--font-color-light);
 }
 body.dark a {
-  color: #bb86fc;
+  color: var(--font-color-dark);
 }
 
+/* .projectWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  height: 100vh;
+  max-width: 100%;
+  background-color: green;
+} */
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* color: var(--font-color-secondary); */
+  max-width: 100%;
+  /* background-color: var(--bg-primary); */
+  /* margin: 0 0.5rem; */
+  padding: 0 20px;
+}
+
+.projectContainer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.projectContainer p {
+  max-width: 100%;
+}
+
+/* .projectContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+} */
 
 /* 
 
@@ -63,5 +110,3 @@ a,
     padding: 0 2rem;
   }
 } */
-
- 
