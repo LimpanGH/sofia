@@ -27,7 +27,7 @@
       </p>
 
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-24 kl. 13.23.44.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/one.png"
         alt=""
       />
       <p>Handelsplatsens befintliga palett.</p>
@@ -45,29 +45,29 @@
         och bord. Där så är möjligt ansluts befintlig takavvattning till planteringslådorna.
       </p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.00.39.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/two.png"
         alt=""
       />
       <p>Utsnitt ur förfrågningsunderlag : överblick fasader mot handelsplatsen.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-08-27 kl. 13.32.16.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/three.png"
         alt=""
       />
       <p>Utsnitt uppställning fasadkomponenter.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.02.28.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/four.png"
         alt=""
       />
 
       <p>Utsnitt uppställning fasadskiva med ihåltagning.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-08-27 kl. 13.30.423.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/five.png"
         alt=""
       />
 
       <p>Utsnitt detaljritning: Principutsnitt fasad.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-08-27 kl. 13.30.42.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/six.png"
         alt=""
       />
 
@@ -76,7 +76,7 @@
         planteringslåda.
       </p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.01.45.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/seven.png"
         alt=""
       />
 
@@ -84,19 +84,19 @@
         Fasadutsnitt limträpelare - typutsnitt mot handelsplatsen, limträpelare typ 2: innerhörn.
       </p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.02.00.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/eight.png"
         alt=""
       />
 
       <p>Utsnitt detaljritning limträpelare typ 2: innerhörn.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.01.16.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/nine.png"
         alt=""
       />
 
       <p>Utsnitt planteringslådor med möblering - nisch 6.</p>
       <img
-        src="../../public/photos_home/Flygfyrens_Handelspark/Skärmavbild 2024-09-27 kl. 14.02.38.png"
+        src="../../public/photos_home/Flygfyrens_Handelspark/ten.png"
         alt=""
       />
 
