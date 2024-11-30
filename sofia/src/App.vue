@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import NavBar from '@/components/NavBar.vue';
-import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
+// import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
+import { onMounted, onUnmounted, onUpdated } from 'vue';
 import { RouterView } from 'vue-router';
 import { useAppStore } from './stores/appStore';
 import { watch } from 'vue';
-import BernardRudofsky from './views/BernardRudofsky.vue';
+// import BernardRudofsky from './views/BernardRudofsky.vue';
 
 const appStore = useAppStore()
 
@@ -21,15 +22,15 @@ watch(
 )
 
 
-const message = ref('Welcome to the app!')
+// const message = ref('Welcome to the app!')
 
 onMounted(() => {
   console.log('App has been mounted')
 })
 
-const incrementCount = () => {
-  appStore.increment()
-}
+// const incrementCount = () => {
+//   appStore.increment()
+// }
 
 onMounted(() => {
   console.log('App mounted!')
@@ -47,10 +48,10 @@ onUnmounted(() => {
 <template>
   <div :class="{ dark: appStore.darkMode }">
     <NavBar />
-    <h1>{{ message }}</h1>
+    <!-- <h1>{{ message }}</h1>
     <button @click="incrementCount">Increment</button>
     <p>Count from Pinia store: {{ appStore.doubleCount }}</p>
-    <BernardRudofsky message="Hello from the parent!" />
+    <BernardRudofsky message="Hello from the parent!" /> -->
     
   </div>
   <RouterView />

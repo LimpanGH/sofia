@@ -1,5 +1,6 @@
 @import './base.css';
 
+/* Reset ---------------------- */
 *,
 *::before,
 *::after {
@@ -11,6 +12,7 @@
   margin: 0;
 }
 
+/* Dark/lightmode ---------------------- */
 body {
   background-color: var(--bg-primary-light);
   color: var(--font-color-light);
@@ -20,6 +22,14 @@ body.dark {
   color: var(--font-color-dark);
 }
 
+a {
+  color: var(--font-color-light);
+}
+body.dark a {
+  color: var(--font-color-dark);
+}
+
+/* Typography ---------------------- */
 button {
   background-color: #6200ea;
   color: white;
@@ -31,42 +41,82 @@ button {
 button:hover {
   background-color: #3700b3;
 }
-a {
-  color: var(--font-color-light);
-}
-body.dark a {
-  color: var(--font-color-dark);
-}
 
-/* .projectWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  height: 100vh;
-  max-width: 100%;
-  background-color: green;
-} */
-
+/* Project-pages ---------------------- */
 .projectContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* color: var(--font-color-secondary); */
   max-width: 100%;
-  /* background-color: var(--bg-primary); */
-  /* margin: 0 0.5rem; */
   padding: 0 20px;
 }
 
 .projectContainer img {
   max-width: 100%;
   height: auto;
+  margin-bottom: 5rem;
 }
 
 .projectContainer p {
   max-width: 100%;
 }
+
+.project-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 1rem;
+  background-color: red;
+}
+
+.description {
+  flex: 2;
+}
+
+.description h1 span {
+  font-style: italic;
+  font-weight: normal;
+}
+
+.description p {
+  margin-top: 1rem;
+  line-height: 1.6;
+  
+}
+
+.details {
+  display: flex;
+  gap: 2rem;
+  flex: 1;
+  font-family: 'Arial', sans-serif;
+}
+
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 0.5rem;
+}
+
+.details strong {
+  font-weight: bold;
+}
+
+@media (min-width: 1024px) {
+  .project-container {
+    flex-direction: row;
+  }
+
+  .projectContainer img {
+    margin-bottom: 12rem;
+    margin-top: 0.5rem;
+  }
+}
+/* --------------------------- */
 
 /* .projectContainer {
   display: grid;
